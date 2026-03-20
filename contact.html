@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fr.Writer | Reach Out</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span class="logo-text">Fr.Writer</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home2.html">Home 2</a></li>
+                <li><a href="services.html">Expertise</a></li>
+                <li><a href="blog.html">Insights</a></li>
+                <li><a href="contact.html" class="active">Reach Out</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: var(--bg-color);">Consultation</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle">🌙</button>
+                <button class="menu-toggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <span class="section-label">Contact</span>
+            <h1 style="opacity: 0; animation: fadeInSlide 1s forwards 0.2s;">Initiate a Dialogue.</h1>
+            <p style="opacity: 0; animation: fadeInSlide 1s forwards 0.4s;">Whether you're looking for a comprehensive copy overhaul or need a reliable editorial partner for ongoing publications, let's discuss your objectives.</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container contact-layout">
+            
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <h3>The Studio</h3>
+                <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem;">
+                    I operate globally and asynchronously, providing meticulous editorial focus unhindered by geographic boundaries.
+                </p>
+
+                <div class="contact-item">
+                    <h4>Direct Inquiry</h4>
+                    <p><a href="mailto:hello@frwriter.com" style="color: var(--secondary); font-weight: 500;">hello@frwriter.com</a></p>
+                </div>
+                
+                <div class="contact-item">
+                    <h4>Phone & WhatsApp</h4>
+                    <p>+1 (917) 555-0842</p>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);">Available Monday to Friday, 9am - 6pm EST</span>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Mailing Address</h4>
+                    <p>100 Editorial Ave<br>Suite 400<br>New York, NY 10012</p>
+                </div>
+
+                <!-- Embedded Map Styled -->
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.7505672861578!2d-73.99611218459461!3d40.72346917933092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598f80456ecd%3A0xc3b5e439bb7caad9!2sSoHo%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1680101683935!5m2!1sen!2sus" width="100%" height="100%" style="border:0; filter: grayscale(100%) invert(90%) contrast(80%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-container" style="background: var(--surface-color); padding: 48px; border: 1px solid var(--border-color);">
+                <span class="section-label">Project Details</span>
+                <h3 style="font-size: 1.8rem; margin-bottom: 32px; font-weight: 300;">Request A Proposal</h3>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Company / Brand</label>
+                        <input type="text" class="form-input" placeholder="Acme Corp">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-input" placeholder="jane@example.com" required>
+                    </div>
+                    <div class="form-group" style="margin-top: 32px;">
+                        <label class="form-label">Service Required</label>
+                        <select class="form-input" style="appearance: none; background: transparent; cursor: pointer;">
+                            <option value="">Select scope...</option>
+                            <option value="b2b">B2B Content Strategy</option>
+                            <option value="ghostwriting">Executive Ghostwriting</option>
+                            <option value="salescopy">Sales Page Copy</option>
+                            <option value="other">Other Editorial Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 40px;">
+                        <label class="form-label">Project Brief</label>
+                        <textarea class="form-textarea" placeholder="Provide an overview of your goals, target audience, and current challenges..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 16px;">Typical response time: 24-48 hours.</p>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <a href="index.html" class="logo-wrapper">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        <span class="logo-text">Fr.Writer</span>
+                    </a>
+                    <p class="footer-desc">Premium freelance copywriting and editorial services dedicated to clarity, conversion, and artistic integrity.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Expertise</a>
+                        <a href="blog.html">Insights</a>
+                        <a href="contact.html">Reach Out</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="footer-links">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter (X)</a>
+                        <a href="#">Medium</a>
+                        <a href="#">Substack</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fr.Writer Services. All rights reserved.</p>
+                <p>Designed with absolute precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
