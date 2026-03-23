@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
+<!---------------------------Header Section----------------------------->
     <nav>
         <div class="container nav-container">
             <a href="index.html" class="logo">
@@ -32,6 +33,7 @@
                         </div>
                     </span>
                 </label>
+                <button class="rtl-toggle-btn" id="rtl-btn-desktop">RTL</button>
                 <a href="login.html" class="btn-login">Login</a>
                 <div class="hamburger">
                     <i class="ri-menu-line"></i>
@@ -40,6 +42,7 @@
         </div>
     </nav>
 
+<!---------------------------Mobile Drawer Section----------------------------->
     <!-- Mobile Drawer -->
     <div class="mobile-drawer">
         <ul class="mobile-links">
@@ -61,10 +64,15 @@
                     </span>
                 </label>
             </li>
+            <li class="mobile-rtl-item">
+                <span>Direction</span>
+                <button class="rtl-toggle-btn" id="rtl-btn-mobile">RTL</button>
+            </li>
         </ul>
     </div>
 
     <main>
+<!---------------------------Hero Section----------------------------->
         <header class="hero" style="height: 60vh;">
             <div class="hero-bg" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpl1OJBQznnvf5Y7nBrUlPddOLDwl4XZYG1A&s');"></div>
             <div class="hero-overlay"></div>
@@ -77,6 +85,7 @@
             </div>
         </header>
 
+<!---------------------------Blog List Section----------------------------->
         <section class="blog-list">
             <div class="container">
                 <div class="card-grid">
@@ -132,6 +141,7 @@
             </div>
         </section>
 
+<!---------------------------Writing Tips Section----------------------------->
         <!-- [NEW] Writing Tips Section -->
         <section class="writing-tips" style="background: var(--primary-text); color: var(--primary-bg);">
             <div class="container">
@@ -158,6 +168,7 @@
         </section>
     </main>
 
+<!---------------------------Footer Section----------------------------->
     <footer>
         <div class="container">
             <div class="footer-grid">

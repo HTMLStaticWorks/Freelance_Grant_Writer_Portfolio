@@ -8,19 +8,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            overflow: hidden;
-        }
-        .auth-page {
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: var(--primary-bg);
-        }
         .checkbox-group {
             display: flex;
             align-items: center;
@@ -30,6 +17,9 @@
         }
         .checkbox-group input {
             width: auto;
+        }
+        .auth-card .logo {
+            justify-content: center;
         }
     </style>
 </head>
@@ -75,13 +65,15 @@
 
             <div class="social-btns" style="margin-top: 1.5rem;">
                 <button class="btn-social btn-google">
-                    <i class="ri-google-fill"></i>
-                    Continue with Google
-                </button>
-                <button class="btn-social btn-email">
-                    <i class="ri-mail-line"></i>
-                    Continue with Email
-                </button>
+        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google">
+        Continue with Google
+    </button>
+
+    <!-- EMAIL BUTTON -->
+    <button class="btn-social btn-email">
+        <img src="https://www.svgrepo.com/show/303161/gmail-icon-logo.svg" alt="Email">
+        Continue with Email
+    </button>
             </div>
 
             <div style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">

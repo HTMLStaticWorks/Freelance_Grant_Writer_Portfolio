@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // =============================================
     // Theme Toggle Logic
-    const themeToggle = document.querySelectorAll('.theme-toggle');
+    // =============================================
     const body = document.body;
     
     // Check for saved theme
@@ -14,26 +16,44 @@ document.addEventListener('DOMContentLoaded', () => {
             const newTheme = cb.checked ? 'dark' : 'light';
             body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            // Sync other checkboxes if many exist (like mobile drawer)
+            // Sync other checkboxes (e.g. mobile drawer)
             themeCheckboxes.forEach(otherCb => {
                 if (otherCb !== cb) otherCb.checked = cb.checked;
             });
         });
     });
 
-    function updateThemeIcon(theme) {
-        themeToggle.forEach(toggle => {
-            const icon = toggle.querySelector('i');
-            if (icon) {
-                icon.className = theme === 'light' ? 'ri-moon-line' : 'ri-sun-line';
-            }
+    // =============================================
+    // RTL Toggle Logic
+    // =============================================
+    const htmlEl = document.documentElement;
+    const savedDir = localStorage.getItem('dir') || 'ltr';
+    htmlEl.setAttribute('dir', savedDir);
+
+    // Update all RTL toggle button labels on page load
+    function updateRTLButtons() {
+        const currentDir = htmlEl.getAttribute('dir');
+        document.querySelectorAll('.rtl-toggle-btn').forEach(btn => {
+            btn.textContent = currentDir === 'rtl' ? 'LTR' : 'RTL';
         });
     }
+    updateRTLButtons();
 
-    // Mobile Menu logic
+    // Bind click on all RTL toggle buttons (desktop nav + mobile drawer)
+    document.querySelectorAll('.rtl-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const newDir = htmlEl.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl';
+            htmlEl.setAttribute('dir', newDir);
+            localStorage.setItem('dir', newDir);
+            updateRTLButtons();
+        });
+    });
+
+    // =============================================
+    // Mobile Menu Logic
+    // =============================================
     const hamburger = document.querySelector('.hamburger');
     const mobileDrawer = document.querySelector('.mobile-drawer');
-    const drawerThemeToggle = mobileDrawer.querySelector('.theme-toggle');
     
     if (hamburger) {
         hamburger.addEventListener('click', () => {
@@ -44,14 +64,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Close drawer on link click
-    mobileDrawer.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileDrawer.classList.remove('active');
-            hamburger.querySelector('i').className = 'ri-menu-line';
+    if (mobileDrawer) {
+        mobileDrawer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.remove('active');
+                if (hamburger) hamburger.querySelector('i').className = 'ri-menu-line';
+            });
         });
-    });
+    }
 
-    // Fade-up animation observer
+    // =============================================
+    // Fade-up Animation Observer
+    // =============================================
     const observerOptions = {
         threshold: 0.1
     };
