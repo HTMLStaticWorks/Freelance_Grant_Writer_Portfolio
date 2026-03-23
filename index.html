@@ -1,222 +1,308 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fr.Writer | Freelance Copywriter & Editor</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mr.Writer | Premium Storytelling & Copywriting</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
+    <nav>
         <div class="container nav-container">
-            <a href="index.html" class="logo-wrapper">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-                <span class="logo-text">Fr.Writer</span>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Mr.Writer" height="35" width="auto" style="height: 35px; width: auto;">
+                Mr.Writer
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="home2.html">Home 2</a></li>
-                <li><a href="services.html">Expertise</a></li>
-                <li><a href="blog.html">Insights</a></li>
-                <li><a href="contact.html">Reach Out</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: var(--bg-color);">Consultation</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle">🌙</button>
-                <button class="menu-toggle">
-                    <span></span><span></span><span></span>
-                </button>
+            <div class="nav-right">
+                <label class="theme-switch">
+                    <input type="checkbox" class="theme-checkbox">
+                    <span class="slider">
+                        <div class="slider-icons">
+                            <i class="ri-moon-line"></i>
+                            <i class="ri-sun-line"></i>
+                        </div>
+                    </span>
+                </label>
+                <a href="login.html" class="btn-login">Login</a>
+                <div class="hamburger">
+                    <i class="ri-menu-line"></i>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section (Split) -->
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <span class="hero-subtitle">Editorial Excellence</span>
-                <h1>Crafting Words That <strong>Resonate</strong>.</h1>
-                <p>I transform complex ideas into compelling narratives. Elevate your brand with award-winning copywriting, content strategy, and ghostwriting services.</p>
-                <div class="hero-btns">
-                    <a href="services.html" class="btn btn-primary">View Expertise</a>
-                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1455390582262-044cdead27d8?auto=format&fit=crop&w=800&q=80" alt="Writing desk" class="hero-image">
-            </div>
-        </div>
-    </header>
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <ul class="mobile-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+             <label class="theme-switch">
+                    <input type="checkbox" class="theme-checkbox">
+                    <span class="slider">
+                        <div class="slider-icons">
+                            <i class="ri-moon-line"></i>
+                            <i class="ri-sun-line"></i>
+                        </div>
+                    </span>
+                </label>
+        </ul>
+    </div>
 
-    <!-- Services / Expertise -->
-    <section class="section" style="background: var(--surface-color);">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Core Capabilities</span>
-                <h2 class="section-title">Specialized Writing Solutions</h2>
-            </div>
-            <div class="grid-3">
-                <div class="service-card">
-                    <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
-                    </svg>
-                    <h3 class="service-title">Copywriting & Conversion</h3>
-                    <p class="service-desc">Persuasive, research-backed copy designed to significantly increase your landing page conversions and sales.</p>
-                    <a href="services.html" class="service-link">Learn More <span>→</span></a>
-                </div>
-                <div class="service-card">
-                    <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
-                    </svg>
-                    <h3 class="service-title">Editorial & Publications</h3>
-                    <p class="service-desc">Long-form journalism, thought leadership articles, and beautifully structured essays for digital magazines.</p>
-                    <a href="services.html" class="service-link">Learn More <span>→</span></a>
-                </div>
-                <div class="service-card">
-                    <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-                    </svg>
-                    <h3 class="service-title">Brand Voice Strategy</h3>
-                    <p class="service-desc">We map out the DNA of your brand language, ensuring consistency across all modern channels and footprints.</p>
-                    <a href="services.html" class="service-link">Learn More <span>→</span></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Author -->
-    <section class="section">
-        <div class="container grid-2 about-grid">
-            <div class="about-img-container">
-                <img src="https://images.unsplash.com/photo-1517404215738-15263e9f9178?auto=format&fit=crop&w=800&q=80" alt="Author Workspace" class="about-img">
-            </div>
-            <div class="about-content">
-                <span class="section-label">The Voice Behind The Pen</span>
-                <h2>Distilling Noise Into Absolute Clarity.</h2>
-                <p>With over a decade navigating the ever-shifting landscape of digital content, I've had the distinct privilege of helping startups find their tone and Fortune 500s refine their corporate narratives.</p>
-                <p>Every piece of text is a bridge between a brand's intent and a reader's understanding. I build those bridges meticulously, word by carefully chosen word.</p>
-                <br>
-                <ul style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px;">
-                    <li style="display: flex; align-items: center; gap: 12px;">
-                        <svg width="20" height="20" fill="none" stroke="var(--secondary)" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
-                        M.A. in English Literature
-                    </li>
-                    <li style="display: flex; align-items: center; gap: 12px;">
-                        <svg width="20" height="20" fill="none" stroke="var(--secondary)" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
-                        Featured in Webby-Winning Publications
-                    </li>
-                    <li style="display: flex; align-items: center; gap: 12px;">
-                        <svg width="20" height="20" fill="none" stroke="var(--secondary)" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
-                        Certified Content Strategist
-                    </li>
-                </ul>
-                <a href="services.html" class="btn btn-secondary">Read Full Story</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Highlights / Stats -->
-    <section class="stats-section">
-        <div class="container grid-3 stats-grid">
-            <div class="stat-item">
-                <div class="stat-num">450+</div>
-                <div class="stat-label">Published Articles</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-num">12</div>
-                <div class="stat-label">Years of Mastery</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-num">98%</div>
-                <div class="stat-label">Client Retention</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section" style="background: var(--surface-color);">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Endorsements</span>
-                <h2 class="section-title">Words From Partners</h2>
-            </div>
-            <div class="grid-2">
-                <div class="testimonial-card">
-                    <svg class="quote-icon" width="40" height="40" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                    <p class="testimonial-text">"Fr.Writer completely revolutionized how we communicate with our B2B clients. The tone is sharp, intelligent, and highly persuasive without sounding like a sales pitch."</p>
-                    <div class="testimonial-author">Eleanor Richardson</div>
-                    <div class="testimonial-company">CMO, TechNova Solutions</div>
-                </div>
-                <div class="testimonial-card">
-                    <svg class="quote-icon" width="40" height="40" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-                    <p class="testimonial-text">"Finding an editor who can genuinely preserve the author's voice while aggressively tightening sentences is rare. Consistently the best editorial partner I've ever hired."</p>
-                    <div class="testimonial-author">Marcus Vance</div>
-                    <div class="testimonial-company">Bestselling Author</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-col">
-                    <a href="index.html" class="logo-wrapper">
-                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <polyline points="10 9 9 9 8 9"></polyline>
-                        </svg>
-                        <span class="logo-text">Fr.Writer</span>
-                    </a>
-                    <p class="footer-desc">Premium freelance copywriting and editorial services dedicated to clarity, conversion, and artistic integrity.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Navigation</h4>
-                    <div class="footer-links">
-                        <a href="index.html">Home</a>
-                        <a href="services.html">Expertise</a>
-                        <a href="blog.html">Insights</a>
-                        <a href="contact.html">Reach Out</a>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg" style="background-image: url('https://cc-west-blog-assets.s3.amazonaws.com/uploads/2019/01/writer-skills-1-1.jpeg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content fade-up">
+                    <span class="hero-badge">The Art of the Pen</span>
+                    <h1>Transforming Ideas Into <br><span class="accent-text">Unforgettable Stories</span></h1>
+                    <p>We don't just write words. We craft experiences that resonate, inspire, and convert. Your vision deserves a voice that speaks with authority and elegance.</p>
+                    <div class="hero-btns">
+                        <a href="contact.html" class="btn-primary">Start Your Story</a>
+                        <a href="services.html" class="btn-secondary">Explore Services</a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h4>Connect</h4>
-                    <div class="footer-links">
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Twitter (X)</a>
-                        <a href="#">Medium</a>
-                        <a href="#">Substack</a>
+            </div>
+        </section>
+
+
+
+
+
+<!---------------------------Service Section----------------------------->
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="sub-title">What We Do</span>
+                    <h2>Premium Writing Services</h2>
+                    <p>Tailored solutions for brands and individuals who demand excellence in every sentence.</p>
+                </div>
+
+                <div class="card-grid">
+                    <div class="card fade-up">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1455392452805-2999965d30dd?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-content">
+                            <i class="ri-quill-pen-line"></i>
+                            <h3>Creative Copywriting</h3>
+                            <p>Compelling narratives that capture your brand's essence and drive meaningful engagement.</p>
+                            <ul>
+                                <li><i class="ri-check-line"></i> Brand Storytelling</li>
+                                <li><i class="ri-check-line"></i> Ad Copy</li>
+                                <li><i class="ri-check-line"></i> Social Media</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card fade-up">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-content">
+                            <i class="ri-book-open-line"></i>
+                            <h3>Editorial Strategy</h3>
+                            <p>Data-driven content planning that aligns with your business goals and audience needs.</p>
+                            <ul>
+                                <li><i class="ri-check-line"></i> Content Audits</li>
+                                <li><i class="ri-check-line"></i> SEO Research</li>
+                                <li><i class="ri-check-line"></i> Tone of Voice</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card fade-up">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-content">
+                            <i class="ri-translate-2"></i>
+                            <h3>Ghostwriting</h3>
+                            <p>Your thoughts, our expertise. We bring your vision to life while maintaining your unique voice.</p>
+                            <ul>
+                                <li><i class="ri-check-line"></i> Book Manuscripts</li>
+                                <li><i class="ri-check-line"></i> Op-Eds</li>
+                                <li><i class="ri-check-line"></i> Thought Leadership</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+
+
+
+<!---------------------------about Section----------------------------->
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-flex">
+                    <div class="about-content fade-up">
+                        <span class="sub-title">Our Philosophy</span>
+                        <h2>Behind Every Great Brand <br>is a Great Story</h2>
+                        <p>At Mr.Writer, we believe that clarity is the ultimate sophistication. Our process involves deep research, strategic thinking, and a relentless pursuit of the perfect word.</p>
+                        <p>Since 2010, we've helped hundreds of clients stand out in a crowded digital landscape through the power of elite writing.</p>
+                        <a href="contact.html" class="btn-primary">Learn More About Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="sub-title">Recognition</span>
+                    <h2>Voices of Success</h2>
+                </div>
+                <div class="testimonial-card fade-up">
+                    <p class="testimonial-text">"Mr.Writer transformed our brand message into a story that actually built trust with our customers. Truly exceptional."</p>
+                    <p class="testimonial-author">&mdash; Elena Rossi, CEO at Veridian</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Preview -->
+        <section id="portfolio" class="portfolio" style="background: var(--secondary-bg);">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="sub-title">Our Work</span>
+                    <h2>Selected Projects</h2>
+                    <p>A glimpse into the diverse range of narratives we've helped bring to life.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="card fade-up">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-content">
+                            <h4 style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">FINTECH</h4>
+                            <h3 style="margin: 0.5rem 0 1rem; font-size: 1.5rem;">The Future of <br>Digital Trust</h3>
+                            <p style="margin-bottom: 0;">A comprehensive white paper for a leading London-based fintech firm.</p>
+                        </div>
+                    </div>
+                    <div class="card fade-up">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-content">
+                            <h4 style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">LIFESTYLE</h4>
+                            <h3 style="margin: 0.5rem 0 1rem; font-size: 1.5rem;">Elegance <br>Redefined</h3>
+                            <p style="margin-bottom: 0;">Brand storytelling and campaign copy for a luxury watchmaker.</p>
+                        </div>
+                    </div>
+                    <div class="card fade-up">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1519389950473-17b0a9981545?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-content">
+                            <h4 style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">TECH</h4>
+                            <h3 style="margin: 0.5rem 0 1rem; font-size: 1.5rem;">SaaS Scaling <br>Secret</h3>
+                            <p style="margin-bottom: 0;">Thought leadership series published in Wired and Forbes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners / Client Logos -->
+        <section class="partners" style="padding: 60px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="fade-up" style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 3rem; opacity: 0.5;">
+                    <span style="font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem;">VERIDIAN</span>
+                    <span style="font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem;">GLOBAL TECH</span>
+                    <span style="font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem;">LUMINA</span>
+                    <span style="font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem;">AETHER</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="sub-title">Common Questions</span>
+                    <h2>Frequenty Asked</h2>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="card fade-up" style="margin-bottom: 1.5rem; text-align: left; align-items: flex-start; padding: 2.5rem;">
+                        <h3 style="text-align: left; font-size: 1.4rem; margin: 0 0 1rem; width: 100%;">What is your typical turnaround time?</h3>
+                        <p style="text-align: left; margin: 0; width: 100%;">Standard projects take 5-7 business days, depending on complexity.</p>
+                    </div>
+                    <div class="card fade-up" style="margin-bottom: 1.5rem; text-align: left; align-items: flex-start; padding: 2.5rem;">
+                        <h3 style="text-align: left; font-size: 1.4rem; margin: 0 0 1rem; width: 100%;">How do you handle revisions?</h3>
+                        <p style="text-align: left; margin: 0; width: 100%;">We offer two rounds of comprehensive revisions to ensure perfection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="fade-up">
+                    <h2>Ready to write your next chapter?</h2>
+                    <p>Contact us today for a consultation on your next project.</p>
+                    <a href="contact.html" class="btn-primary" style="background: var(--accent-color); color: white;">Get Started Today</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>Legal</h4>
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Cookie Details</a>
+                    <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Mr.Writer" height="35" width="auto" style="height: 35px; width: auto;">
+                Mr.Writer
+            </a>
+                    <p style="text-align: left; margin-top: 1rem;">Elevating communication through the precision of premium writing services.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Other Pages</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links" style="display: flex; gap: 1rem; justify-content: start;">
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-box-line"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-medium-line"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Fr.Writer Services. All rights reserved.</p>
-                <p>Designed with absolute precision.</p>
+                <p>&copy; 2026 Mr.Writer. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span style="margin: 0 10px;">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

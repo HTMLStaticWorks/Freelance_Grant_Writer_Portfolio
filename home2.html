@@ -1,230 +1,329 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fr.Writer | Elevated Content Architecture</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mr.Writer | Home 2 - Modern Storytelling</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <style>
-        .hero-v2 {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            padding-top: 90px;
-        }
-        .hero-v2-bg {
+        /* Home 2 Unique Styles (Minimal) */
+        .v-text {
+            writing-mode: vertical-rl;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            opacity: 0.3;
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-            filter: grayscale(80%) brightness(0.4);
-            z-index: 1;
-        }
-        .hero-v2 .container {
-            position: relative;
-            z-index: 2;
-            color: #FAFAFA;
-            max-width: 800px;
-        }
-        .hero-v2 h1 {
-            color: #FAFAFA;
-            font-size: clamp(3.5rem, 6vw, 4.5rem);
-            font-weight: 300;
-            margin-bottom: 32px;
-            opacity: 0;
-            animation: fadeInSlide 1s forwards 0.3s;
-        }
-        .hero-v2 p {
-            color: #E5E5E5;
-            font-size: 1.25rem;
-            margin-bottom: 40px;
-            opacity: 0;
-            animation: fadeInSlide 1s forwards 0.6s;
-        }
-        .hero-v2 .hero-btns {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            opacity: 0;
-            animation: fadeInSlide 1s forwards 0.9s;
-        }
-        .hero-v2 .btn-primary {
-            background: #FAFAFA;
-            color: #171717;
-        }
-        .hero-v2 .btn-primary:hover {
-            background: var(--secondary);
-            color: #fff;
-        }
-        .hero-v2 .btn-secondary {
-            border-color: #FAFAFA;
-            color: #FAFAFA;
-        }
-        .hero-v2 .btn-secondary:hover {
-            background: #FAFAFA;
-            color: #171717;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
         }
     </style>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
+    <nav>
         <div class="container nav-container">
-            <a href="index.html" class="logo-wrapper">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-                <span class="logo-text">Fr.Writer</span>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Mr.Writer" height="35" width="auto" style="height: 35px; width: auto;">
+                Mr.Writer
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="home2.html" class="active">Home 2</a></li>
-                <li><a href="services.html">Expertise</a></li>
-                <li><a href="blog.html">Insights</a></li>
-                <li><a href="contact.html">Reach Out</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: var(--bg-color);">Consultation</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle">🌙</button>
-                <button class="menu-toggle">
-                    <span></span><span></span><span></span>
-                </button>
+            <div class="nav-right">
+                <label class="theme-switch">
+                    <input type="checkbox" class="theme-checkbox">
+                    <span class="slider">
+                        <div class="slider-icons">
+                            <i class="ri-moon-line"></i>
+                            <i class="ri-sun-line"></i>
+                        </div>
+                    </span>
+                </label>
+                <a href="login.html" class="btn-login">Login</a>
+                <div class="hamburger">
+                    <i class="ri-menu-line"></i>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section V2 (Centered) -->
-    <header class="hero-v2">
-        <div class="hero-v2-bg"></div>
+    <!-- Mobile Drawer (Same as index) -->
+    <div class="mobile-drawer">
+        <ul class="mobile-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html" class="active">Home 2</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li class="mobile-theme-item">
+                <span>Theme</span>
+                <label class="theme-switch">
+                    <input type="checkbox" class="theme-checkbox">
+                    <span class="slider">
+                        <div class="slider-icons">
+                            <i class="ri-moon-line"></i>
+                            <i class="ri-sun-line"></i>
+                        </div>
+                    </span>
+                </label>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="v-text">Established 2010</div>
+        
+        <section class="hero">
+            <div class="hero-bg" style="background-image: url('https://wallpapercave.com/wp/wp7110622.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content fade-up">
+                    <span class="hero-badge">Home 2 Variation</span>
+                    <h1>The Precision of <br><span class="accent-text">Narrative Design</span></h1>
+                    <p>Experience a different take on the art of writing. Focused on bold typography and minimalist grid systems. Every word counts in the story of your success.</p>
+                    <div class="hero-btns">
+                        <a href="contact.html" class="btn-primary">Get A Quote</a>
+                        <a href="blog.html" class="btn-secondary">Read Insights</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic sections similar to Home 1 but with different flex order or grid -->
+        <section class="services-2" style="background: var(--secondary-bg);">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2>Core Disciplines</h2>
+                </div>
+                <!-- Reuse cards with a 2-column layout for Home 2 -->
+                <div class="card-grid">
+                    <div class="card fade-up">
+                        <h3>Strategy</h3>
+                        <p>Planning content that works.</p>
+                    </div>
+                    <div class="card fade-up">
+                        <h3>Execution</h3>
+                        <p>Writing content that survives.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-2">
+            <div class="container">
+                <div class="fade-up" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <span class="sub-title">Our Mission</span>
+                    <h2>Clarity Over Chaos</h2>
+                    <p>In a world of noise, we provide the silence and precision of carefully chosen words. Our mission is to ensure your message is not just heard, but understood.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="timeline">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="sub-title">Roadmap</span>
+                    <h2>The Writing Journey</h2>
+                </div>
+                <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 3rem;">
+                    <div class="fade-up" style="display: flex; gap: 2rem; align-items: center;">
+                        <div style="min-width: 80px; height: 80px; border-radius: 50%; border: 1px solid var(--accent-color); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 1.5rem;">01</div>
+                        <div>
+                            <h3 style="text-align: left;">Conceptualization</h3>
+                            <p style="text-align: left; margin: 0.5rem 0;">Drafting the skeleton of your brand story.</p>
+                        </div>
+                    </div>
+                    <div class="fade-up" style="display: flex; gap: 2rem; align-items: center;">
+                        <div style="min-width: 80px; height: 80px; border-radius: 50%; border: 1px solid var(--accent-color); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 1.5rem;">02</div>
+                        <div>
+                            <h3 style="text-align: left;">Manifestation</h3>
+                            <p style="text-align: left; margin: 0.5rem 0;">Breathing life into words with strategic precision.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recognition Section -->
+        <section class="recognition" style="background: var(--primary-text); color: var(--primary-bg);">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="sub-title" style="color: var(--accent-color);">Authority</span>
+                    <h2 style="color: white;">Industry Recognition</h2>
+                </div>
+                <div class="card-grid">
+                    <div class="card fade-up" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                        <i class="ri-award-line"></i>
+                        <h3 style="color: white;">Best Copy 2024</h3>
+                        <p style="color: var(--border-color);">Digital Excellence Awards</p>
+                    </div>
+                    <div class="card fade-up" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                        <i class="ri-medal-fill"></i>
+                        <h3 style="color: white;">Top Writer</h3>
+                        <p style="color: var(--border-color);">Freelance Collective</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [NEW] Stats Section -->
+        <section class="stats" style="padding: 100px 0; border-bottom: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="sub-title">Proven Excellence</span>
+                    <h2>The Numbers Speak</h2>
+                </div>
+                <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                    <div class="stat-item fade-up" style="text-align: center;">
+                        <h2 style="font-size: 3rem; color: var(--accent-color); margin-bottom: 0.5rem;">500+</h2>
+                        <span class="sub-title" style="font-size: 0.75rem;">Projects Completed</span>
+                    </div>
+                    <div class="stat-item fade-up" style="text-align: center;">
+                        <h2 style="font-size: 3rem; color: var(--accent-color); margin-bottom: 0.5rem;">15+</h2>
+                        <span class="sub-title" style="font-size: 0.75rem;">Years Experience</span>
+                    </div>
+                    <div class="stat-item fade-up" style="text-align: center;">
+                        <h2 style="font-size: 3rem; color: var(--accent-color); margin-bottom: 0.5rem;">100%</h2>
+                        <span class="sub-title" style="font-size: 0.75rem;">Client Satisfaction</span>
+                    </div>
+                    <div class="stat-item fade-up" style="text-align: center;">
+                        <h2 style="font-size: 3rem; color: var(--accent-color); margin-bottom: 0.5rem;">24/7</h2>
+                        <span class="sub-title" style="font-size: 0.75rem;">Global Support</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [NEW] Deep Dive Process Section -->
+        <section class="process-deep-dive" style="background: var(--secondary-bg);">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="sub-title">Detailed Workflow</span>
+                    <h2>How Excellence is Crafted</h2>
+                    <p>Our methodology combines rigorous analytical research with avant-garde creative execution to deliver unparalleled results.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="card fade-up">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1554441584-69970335021e?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-content">
+                            <i class="ri-search-eye-line"></i>
+                            <h3>Analytical Research</h3>
+                            <p>We dissect your industry, competitors, and audience behavior to find the winning narrative angle.</p>
+                        </div>
+                    </div>
+                    <div class="card fade-up">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-content">
+                            <i class="ri-mind-map"></i>
+                            <h3>Creative Ideation</h3>
+                            <p>Brainstorming unique concepts that break through the digital noise and capture attention.</p>
+                        </div>
+                    </div>
+                    <div class="card fade-up">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-content">
+                            <i class="ri-quill-pen-line"></i>
+                            <h3>Strategic Drafting</h3>
+                            <p>The core writing phase where every sentence is engineered for maximum psychological impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [NEW] Inspiration/Quote Section -->
+        <section class="inspiration" style="padding: 120px 0; background: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0));">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="sub-title">Foundational Belief</span>
+                    <h2>A Final Thought</h2>
+                </div>
+                <div class="fade-up" style="max-width: 900px; margin: 0 auto; text-align: center;">
+                    <i class="ri-double-quotes-l" style="font-size: 4rem; color: var(--accent-color); opacity: 0.3;"></i>
+                    <h2 style="font-family: var(--font-serif); font-size: 2.5rem; font-style: italic; line-height: 1.4; margin: 2rem 0;">"The art of writing is the art of discovering what you believe."</h2>
+                    <p class="sub-title" style="letter-spacing: 4px;">&mdash; Gustave Flaubert</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="fade-up" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                    <span class="sub-title">Stay Updated</span>
+                    <h2>The Storyteller's Letter</h2>
+                    <p>Subscribe to receive monthly insights on branding, literature, and the art of copy.</p>
+                    <form style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                        <input type="email" placeholder="Email Address" style="flex: 1; min-width: 250px; padding: 1rem; border: 1px solid var(--border-color); border-radius: 4px; background: transparent; color: var(--primary-text);">
+                        <button type="submit" class="btn-primary" style="padding: 1rem 2.5rem; border: none;">Join</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="fade-up">
+                    <h2 style="text-align: center;">Home 2 CTA Section</h2>
+                    <p style="text-align: center;">Experience a different approach to storytelling.</p>
+                    <div style="display: flex; justify-content: center;">
+                        <a href="register.html" class="btn-primary">Join the Collective</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <div class="container">
-            <h1>Minimalist Structure. Maximum Impact.</h1>
-            <p>Providing precision copy and highly analytical content architecture for ambitious brands refusing to blend into the noise.</p>
-            <div class="hero-btns">
-                <a href="services.html" class="btn btn-primary">Our Framework</a>
-                <a href="contact.html" class="btn btn-secondary">Start Project</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Expertise Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Areas Of Focus</span>
-                <h2 class="section-title">The Strategic Output</h2>
-            </div>
-            
-            <div style="display: flex; flex-direction: column; gap: 40px;">
-                <div class="service-card" style="display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: center;">
-                    <h3 class="service-title" style="margin: 0; font-size: 2rem;">B2B Whitepapers & Reports</h3>
-                    <div>
-                        <p class="service-desc">Transforming vast sets of data into highly readable, executive-summary level prose that builds immediate authority and trust within your sector.</p>
-                        <a href="services.html" class="service-link">View Portfolio <span>→</span></a>
-                    </div>
-                </div>
-                <div class="service-card" style="display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: center;">
-                    <h3 class="service-title" style="margin: 0; font-size: 2rem;">Executive Ghostwriting</h3>
-                    <div>
-                        <p class="service-desc">Providing a distinct, authoritative voice for CEOs and founders. Articles, speeches, and internal memos engineered to command absolute attention.</p>
-                        <a href="services.html" class="service-link">View Details <span>→</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section" style="background: var(--surface-color);">
-        <div class="container grid-2 about-grid">
-            <div class="about-img-container">
-                <img src="https://images.unsplash.com/photo-1544716278-e513176f20b5?auto=format&fit=crop&w=800&q=80" alt="Author Workspace" class="about-img" style="aspect-ratio: 16/9;">
-            </div>
-            <div class="about-content">
-                <span class="section-label">Methodology</span>
-                <h2>Data-Driven Artistry.</h2>
-                <p>Great copy acts as a mirror that reflects the target demographic's deepest aspirations while framing your brand as the obvious vehicle to reach them.</p>
-                <a href="services.html" class="btn btn-secondary" style="margin-top: 24px;">Discover Process</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats / Highlights -->
-    <section class="stats-section">
-        <div class="container grid-3 stats-grid">
-            <div class="stat-item">
-                <div class="stat-num">1.2M</div>
-                <div class="stat-label">Words Authored</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-num">300+</div>
-                <div class="stat-label">High-Ticket CLients</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-num">50%</div>
-                <div class="stat-label">Avg Conversion Lift</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
+            <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="index.html" class="logo-wrapper">
-                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <polyline points="10 9 9 9 8 9"></polyline>
-                        </svg>
-                        <span class="logo-text">Fr.Writer</span>
-                    </a>
-                    <p class="footer-desc">Premium freelance copywriting and editorial services dedicated to clarity, conversion, and artistic integrity.</p>
+                    <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Mr.Writer">Mr.Writer</a>
+                    <p style="text-align: left; margin-top: 1rem;">Elevating communication through the precision of premium writing services.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Navigation</h4>
-                    <div class="footer-links">
-                        <a href="index.html">Home</a>
-                        <a href="services.html">Expertise</a>
-                        <a href="blog.html">Insights</a>
-                        <a href="contact.html">Reach Out</a>
-                    </div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Connect</h4>
-                    <div class="footer-links">
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Twitter (X)</a>
-                        <a href="#">Medium</a>
-                        <a href="#">Substack</a>
-                    </div>
+                    <h4>Other Pages</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Legal</h4>
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Cookie Details</a>
+                    <h4>Follow Us</h4>
+                    <div class="social-links" style="display: flex; gap: 1rem; justify-content: start;">
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-box-line"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Fr.Writer Services. All rights reserved.</p>
-                <p>Designed with absolute precision.</p>
+                <p>&copy; 2026 Mr.Writer. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

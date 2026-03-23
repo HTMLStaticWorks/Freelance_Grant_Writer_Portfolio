@@ -1,176 +1,254 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fr.Writer | Reach Out</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contact | Mr.Writer - Start Your Story</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .contact-section {
+            padding: 180px 0 100px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+        .contact-info {
+            text-align: left;
+        }
+        .contact-info h2 {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        .contact-info p {
+            text-align: left;
+            margin-left: 0;
+            margin-bottom: 2rem;
+        }
+        .info-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--secondary-bg);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+        .contact-form {
+            background: var(--secondary-bg);
+            padding: 3rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+        @media (max-width: 360px) {
+            .contact-section {
+                padding: 120px 10px 60px;
+            }
+            .contact-info, .contact-info h2, .contact-info p {
+                text-align: center;
+            }
+            .info-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .contact-form {
+                padding: 2rem 1rem;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
+    <nav>
         <div class="container nav-container">
-            <a href="index.html" class="logo-wrapper">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-                <span class="logo-text">Fr.Writer</span>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Mr.Writer" height="35" width="auto" style="height: 35px; width: auto;">
+                Mr.Writer
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="home2.html">Home 2</a></li>
-                <li><a href="services.html">Expertise</a></li>
-                <li><a href="blog.html">Insights</a></li>
-                <li><a href="contact.html" class="active">Reach Out</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: var(--bg-color);">Consultation</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle">🌙</button>
-                <button class="menu-toggle">
-                    <span></span><span></span><span></span>
-                </button>
+            <div class="nav-right">
+                <label class="theme-switch">
+                    <input type="checkbox" class="theme-checkbox">
+                    <span class="slider">
+                        <div class="slider-icons">
+                            <i class="ri-moon-line"></i>
+                            <i class="ri-sun-line"></i>
+                        </div>
+                    </span>
+                </label>
+                <a href="login.html" class="btn-login">Login</a>
+                <div class="hamburger">
+                    <i class="ri-menu-line"></i>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Page Hero -->
-    <header class="page-hero">
-        <div class="container">
-            <span class="section-label">Contact</span>
-            <h1 style="opacity: 0; animation: fadeInSlide 1s forwards 0.2s;">Initiate a Dialogue.</h1>
-            <p style="opacity: 0; animation: fadeInSlide 1s forwards 0.4s;">Whether you're looking for a comprehensive copy overhaul or need a reliable editorial partner for ongoing publications, let's discuss your objectives.</p>
-        </div>
-    </header>
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <ul class="mobile-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li class="mobile-theme-item">
+                <span>Theme</span>
+                <label class="theme-switch">
+                    <input type="checkbox" class="theme-checkbox">
+                    <span class="slider">
+                        <div class="slider-icons">
+                            <i class="ri-moon-line"></i>
+                            <i class="ri-sun-line"></i>
+                        </div>
+                    </span>
+                </label>
+            </li>
+        </ul>
+    </div>
 
-    <!-- Contact Section -->
-    <section class="section">
-        <div class="container contact-layout">
-            
-            <!-- Contact Details -->
-            <div class="contact-details">
-                <h3>The Studio</h3>
-                <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem;">
-                    I operate globally and asynchronously, providing meticulous editorial focus unhindered by geographic boundaries.
-                </p>
-
-                <div class="contact-item">
-                    <h4>Direct Inquiry</h4>
-                    <p><a href="mailto:hello@frwriter.com" style="color: var(--secondary); font-weight: 500;">hello@frwriter.com</a></p>
-                </div>
-                
-                <div class="contact-item">
-                    <h4>Phone & WhatsApp</h4>
-                    <p>+1 (917) 555-0842</p>
-                    <span style="font-size: 0.85rem; color: var(--text-muted);">Available Monday to Friday, 9am - 6pm EST</span>
-                </div>
-
-                <div class="contact-item">
-                    <h4>Mailing Address</h4>
-                    <p>100 Editorial Ave<br>Suite 400<br>New York, NY 10012</p>
-                </div>
-
-                <!-- Embedded Map Styled -->
-                <div class="map-wrapper">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.7505672861578!2d-73.99611218459461!3d40.72346917933092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598f80456ecd%3A0xc3b5e439bb7caad9!2sSoHo%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1680101683935!5m2!1sen!2sus" width="100%" height="100%" style="border:0; filter: grayscale(100%) invert(90%) contrast(80%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <main>
+        <header class="hero" style="height: 60vh;">
+            <div class="hero-bg" style="background-image: url('https://wallpaperaccess.com/full/3849689.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="fade-up" style="text-align: center;">
+                    <span class="sub-title">Connect</span>
+                    <h1 style="font-size: 4rem;">Get In Touch</h1>
                 </div>
             </div>
+        </header>
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info fade-up">
+                        <h2>Ready to start your next project?</h2>
+                        <p>Fill out the form or reach out via our official channels. We respond to all inquiries within 24 hours.</p>
+                        
+                        <div class="info-item">
+                            <div class="info-icon"><i class="ri-map-pin-line"></i></div>
+                            <div>
+                                <h4 style="text-align: left;">Studio Location</h4>
+                                <p style="margin-bottom: 0;">123 Literary Ave, London, UK</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="ri-mail-line"></i></div>
+                            <div>
+                                <h4 style="text-align: left;">Email Address</h4>
+                                <p style="margin-bottom: 0;">hello@mrwriter.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="ri-phone-line"></i></div>
+                            <div>
+                                <h4 style="text-align: left;">Phone Number</h4>
+                                <p style="margin-bottom: 0;">+44 20 7946 0958</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <!-- Contact Form -->
-            <div class="contact-form-container" style="background: var(--surface-color); padding: 48px; border: 1px solid var(--border-color);">
-                <span class="section-label">Project Details</span>
-                <h3 style="font-size: 1.8rem; margin-bottom: 32px; font-weight: 300;">Request A Proposal</h3>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" class="form-input" placeholder="Jane Doe" required>
+                    <div class="contact-form fade-up">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>First Name</label>
+                                    <input type="text" placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" placeholder="Doe">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea style="width: 100%; height: 150px; border: 1px solid var(--border-color); background: transparent; border-radius: 4px; padding: 1rem; color: var(--primary-text); font-family: var(--font-sans);" placeholder="How can we help you?"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label class="form-label">Company / Brand</label>
-                        <input type="text" class="form-input" placeholder="Acme Corp">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Email Address</label>
-                        <input type="email" class="form-input" placeholder="jane@example.com" required>
-                    </div>
-                    <div class="form-group" style="margin-top: 32px;">
-                        <label class="form-label">Service Required</label>
-                        <select class="form-input" style="appearance: none; background: transparent; cursor: pointer;">
-                            <option value="">Select scope...</option>
-                            <option value="b2b">B2B Content Strategy</option>
-                            <option value="ghostwriting">Executive Ghostwriting</option>
-                            <option value="salescopy">Sales Page Copy</option>
-                            <option value="other">Other Editorial Services</option>
-                        </select>
-                    </div>
-                    <div class="form-group" style="margin-bottom: 40px;">
-                        <label class="form-label">Project Brief</label>
-                        <textarea class="form-textarea" placeholder="Provide an overview of your goals, target audience, and current challenges..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
-                    <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 16px;">Typical response time: 24-48 hours.</p>
-                </form>
+                </div>
             </div>
-            
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer-top">
+            <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="index.html" class="logo-wrapper">
-                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <polyline points="10 9 9 9 8 9"></polyline>
-                        </svg>
-                        <span class="logo-text">Fr.Writer</span>
-                    </a>
-                    <p class="footer-desc">Premium freelance copywriting and editorial services dedicated to clarity, conversion, and artistic integrity.</p>
+                    <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Mr.Writer">Mr.Writer</a>
+                    <p style="text-align: left; margin-top: 1rem;">Elevating communication through the precision of premium writing services.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Navigation</h4>
-                    <div class="footer-links">
-                        <a href="index.html">Home</a>
-                        <a href="services.html">Expertise</a>
-                        <a href="blog.html">Insights</a>
-                        <a href="contact.html">Reach Out</a>
-                    </div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Connect</h4>
-                    <div class="footer-links">
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Twitter (X)</a>
-                        <a href="#">Medium</a>
-                        <a href="#">Substack</a>
-                    </div>
+                    <h4>Other Pages</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Legal</h4>
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Cookie Details</a>
+                    <h4>Follow Us</h4>
+                    <div class="social-links" style="display: flex; gap: 1rem; justify-content: start;">
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-box-line"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Fr.Writer Services. All rights reserved.</p>
-                <p>Designed with absolute precision.</p>
+                <p>&copy; 2026 Mr.Writer. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

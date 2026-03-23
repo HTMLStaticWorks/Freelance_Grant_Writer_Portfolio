@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Mr.Writer</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        .auth-page {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--primary-bg);
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+        }
+        .checkbox-group input {
+            width: auto;
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <div class="auth-page">
+        <div class="auth-card fade-up visible">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <a href="index.html" class="logo" style="justify-content: center; margin-bottom: 1rem;">
+                    <img src="assets/images/logo.png" alt="Mr.Writer">
+                    Mr.Writer
+                </a>
+                <h2 style="margin-top: 0.5rem;">Join the Collective</h2>
+                <p>Begin your journey as a master storyteller.</p>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="name@company.com" required>
+                </div>
+                <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I accept the Terms & Conditions</label>
+                </div>
+                
+                <button type="submit" class="btn-submit">Register</button>
+            </form>
+
+            <div class="social-btns" style="margin-top: 1.5rem;">
+                <button class="btn-social btn-google">
+                    <i class="ri-google-fill"></i>
+                    Continue with Google
+                </button>
+                <button class="btn-social btn-email">
+                    <i class="ri-mail-line"></i>
+                    Continue with Email
+                </button>
+            </div>
+
+            <div style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">
+                <span>Already have an account?</span>
+                <a href="login.html" style="color: var(--accent-color); font-weight: 600; margin-left: 5px;">Login here</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

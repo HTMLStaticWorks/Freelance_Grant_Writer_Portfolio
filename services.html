@@ -1,215 +1,240 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fr.Writer | Expertise</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .service-img-card {
-            background: var(--surface-color);
-            border: 1px solid var(--border-color);
-            transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            border-radius: 4px;
-        }
-        .service-img-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-        .service-img-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            filter: grayscale(40%);
-            transition: filter 0.4s;
-        }
-        .service-img-card:hover img {
-            filter: grayscale(0%);
-        }
-        .service-img-content {
-            padding: 32px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-        .service-img-title {
-            font-size: 1.4rem;
-            margin-bottom: 16px;
-            font-weight: 500;
-        }
-        .service-img-desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 24px;
-            flex: 1;
-        }
-        .service-price {
-            font-family: var(--font-heading);
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--secondary);
-            margin-bottom: 16px;
-        }
-    </style>
+    <title>Services | Mr.Writer - Premium Writing Solutions</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
+    <nav>
         <div class="container nav-container">
-            <a href="index.html" class="logo-wrapper">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-                <span class="logo-text">Fr.Writer</span>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Mr.Writer" height="35" width="auto" style="height: 35px; width: auto;">
+                Mr.Writer
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="home2.html">Home 2</a></li>
-                <li><a href="services.html" class="active">Expertise</a></li>
-                <li><a href="blog.html">Insights</a></li>
-                <li><a href="contact.html">Reach Out</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html" class="btn btn-primary" style="padding: 10px 24px; color: var(--bg-color);">Consultation</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle">🌙</button>
-                <button class="menu-toggle">
-                    <span></span><span></span><span></span>
-                </button>
+            <div class="nav-right">
+                <label class="theme-switch">
+                    <input type="checkbox" class="theme-checkbox">
+                    <span class="slider">
+                        <div class="slider-icons">
+                            <i class="ri-moon-line"></i>
+                            <i class="ri-sun-line"></i>
+                        </div>
+                    </span>
+                </label>
+                <a href="login.html" class="btn-login">Login</a>
+                <div class="hamburger">
+                    <i class="ri-menu-line"></i>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Page Hero -->
-    <header class="page-hero">
-        <div class="container">
-            <span class="section-label">Our Capabilities</span>
-            <h1 style="opacity: 0; animation: fadeInSlide 1s forwards 0.2s;">Specialized Writing Solutions</h1>
-            <p style="opacity: 0; animation: fadeInSlide 1s forwards 0.4s;">We offer a range of premium editorial and copywriting services designed to map strictly to high-growth business objectives.</p>
-        </div>
-    </header>
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <ul class="mobile-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Home 2</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li class="mobile-theme-item">
+                <span>Theme</span>
+                <label class="theme-switch">
+                    <input type="checkbox" class="theme-checkbox">
+                    <span class="slider">
+                        <div class="slider-icons">
+                            <i class="ri-moon-line"></i>
+                            <i class="ri-sun-line"></i>
+                        </div>
+                    </span>
+                </label>
+            </li>
+        </ul>
+    </div>
 
-    <!-- Detailed Services Content -->
-    <section class="section">
-        <div class="container">
-            <div class="grid-3">
-                <div class="service-img-card">
-                    <img src="https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=600&q=80" alt="B2B Copywriting" loading="lazy">
-                    <div class="service-img-content">
-                        <h3 class="service-img-title">B2B Content Strategy</h3>
-                        <p class="service-img-desc">Building an entire architectural blueprint for your brand's digital presence, from top-tier awareness pillars to conversion-focused landing pages.</p>
-                        <div class="service-price">Starting at $2,500/mo</div>
-                        <a href="contact.html" class="btn btn-secondary">Inquire Now</a>
-                    </div>
+    <main>
+        <header class="hero" style="height: 60vh;">
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1920&auto=format&fit=crop');"></div>
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="fade-up">
+                    <span class="sub-title">Expertise</span>
+                    <h1 style="font-size: 4rem;">Our Disciplines</h1>
+                    <p>A comprehensive suite of writing services designed for those who value precision, clarity, and impact in their communication.</p>
                 </div>
-                <div class="service-img-card">
-                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead27d8?auto=format&fit=crop&w=600&q=80" alt="Ghostwriting" loading="lazy">
-                    <div class="service-img-content">
-                        <h3 class="service-img-title">Executive Ghostwriting</h3>
-                        <p class="service-img-desc">For CEOs and founders requiring a strong public voice. Op-eds, LinkedIn posts, and keynote speeches crafted securely and anonymously.</p>
-                        <div class="service-price">Custom Retainer</div>
-                        <a href="contact.html" class="btn btn-secondary">Inquire Now</a>
+            </div>
+        </header>
+
+        <section class="services-detail">
+            <div class="container">
+                <div class="card-grid">
+                    <!-- Service 1 -->
+                    <div class="card fade-up">
+                        <i class="ri-edit-2-line"></i>
+                        <h3>Copywriting</h3>
+                        <p>High-conversion copy for websites, sales pages, and marketing campaigns. We focus on the psychology of the reader.</p>
+                        <ul>
+                            <li><i class="ri-check-line"></i> Landing Pages</li>
+                            <li><i class="ri-check-line"></i> Email Sequences</li>
+                            <li><i class="ri-check-line"></i> Product Descriptions</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="service-img-card">
-                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=600&q=80" alt="Sales Copy" loading="lazy">
-                    <div class="service-img-content">
-                        <h3 class="service-img-title">Sales & Landing Pages</h3>
-                        <p class="service-img-desc">Direct-response copy written to trigger action. Ideal for product launches, software feature showcases, and high-ticket service sales grids.</p>
-                        <div class="service-price">Per Project Basis</div>
-                        <a href="contact.html" class="btn btn-secondary">Inquire Now</a>
+                    <!-- Service 2 -->
+                    <div class="card fade-up">
+                        <i class="ri-booklet-line"></i>
+                        <h3>Content Strategy</h3>
+                        <p>Developing long-form content that establishes authority and builds a community around your brand.</p>
+                        <ul>
+                            <li><i class="ri-check-line"></i> Blog Articles</li>
+                            <li><i class="ri-check-line"></i> White Papers</li>
+                            <li><i class="ri-check-line"></i> Case Studies</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="service-img-card">
-                    <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&w=600&q=80" alt="Email Marketing" loading="lazy">
-                    <div class="service-img-content">
-                        <h3 class="service-img-title">Email Sequencing</h3>
-                        <p class="service-img-desc">High-open, high-click automated email funnels that strategically warm up cold leads and close persistent prospects over 5-10 days.</p>
-                        <div class="service-price">Starting at $1,200</div>
-                        <a href="contact.html" class="btn btn-secondary">Inquire Now</a>
+                    <!-- Service 3 -->
+                    <div class="card fade-up">
+                        <i class="ri-chat-voice-line"></i>
+                        <h3>Tone of Voice</h3>
+                        <p>We help you find and institutionalize the unique voice that makes your brand unmistakable.</p>
+                        <ul>
+                            <li><i class="ri-check-line"></i> Voice Audits</li>
+                            <li><i class="ri-check-line"></i> Brand Guidelines</li>
+                            <li><i class="ri-check-line"></i> Scripting</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="service-img-card">
-                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Print Ads" loading="lazy">
-                    <div class="service-img-content">
-                        <h3 class="service-img-title">Print & Billboard Copy</h3>
-                        <p class="service-img-desc">For when six words matter more than six thousand. Pure, undistilled creative advertising copy for out-of-home campaigns.</p>
-                        <div class="service-price">Custom Scope</div>
-                        <a href="contact.html" class="btn btn-secondary">Inquire Now</a>
+                    <!-- [NEW] Service 4 -->
+                    <div class="card fade-up">
+                        <i class="ri-book-3-line"></i>
+                        <h3>Manuscript Editing</h3>
+                        <p>Polishing your book or long-form piece to perfection while preserving your distinct authorial style.</p>
+                        <ul>
+                            <li><i class="ri-check-line"></i> Content Editing</li>
+                            <li><i class="ri-check-line"></i> Proofreading</li>
+                            <li><i class="ri-check-line"></i> Structural Review</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="service-img-card">
-                    <img src="https://images.unsplash.com/photo-1544716278-e513176f20b5?auto=format&fit=crop&w=600&q=80" alt="Brand Audio Scripting" loading="lazy">
-                    <div class="service-img-content">
-                        <h3 class="service-img-title">Video & Audio Scripting</h3>
-                        <p class="service-img-desc">Compelling storytelling translated for the spoken word. VSLs, documentary narrations, and radio scripts designed to be heard.</p>
-                        <div class="service-price">Starting at $900</div>
-                        <a href="contact.html" class="btn btn-secondary">Inquire Now</a>
+                    <!-- [NEW] Service 5 -->
+                    <div class="card fade-up">
+                        <i class="ri-mic-line"></i>
+                        <h3>Speech Writing</h3>
+                        <p>Crafting powerful speeches that resonate with the room and leave a lasting impression on your audience.</p>
+                        <ul>
+                            <li><i class="ri-check-line"></i> Keynote Prep</li>
+                            <li><i class="ri-check-line"></i> Wedding Toasts</li>
+                            <li><i class="ri-check-line"></i> Corporate Addresses</li>
+                        </ul>
+                    </div>
+                    <!-- [NEW] Service 6 -->
+                    <div class="card fade-up">
+                        <i class="ri-file-text-line"></i>
+                        <h3>Technical Documentation</h3>
+                        <p>Simplifying the complex. We turn technical specs into clear, readable, and professional documents.</p>
+                        <ul>
+                            <li><i class="ri-check-line"></i> User Guides</li>
+                            <li><i class="ri-check-line"></i> White Papers</li>
+                            <li><i class="ri-check-line"></i> ISO Standards</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+        <section class="process" style="background: var(--primary-text); color: var(--primary-bg); padding: 120px 0;">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="sub-title" style="color: var(--accent-color);">Process</span>
+                    <h2 style="color: white;">How We Work</h2>
+                </div>
+                <!-- Logic: Centered cards for process -->
+                <div class="card-grid">
+                    <div class="card fade-up" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                        <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--accent-color);">01</span>
+                        <h3 style="color: white;">Discovery</h3>
+                        <p style="color: var(--border-color);">Deep dive into your goals, audience, and industry nuances.</p>
+                    </div>
+                    <div class="card fade-up" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                        <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--accent-color);">02</span>
+                        <h3 style="color: white;">Creation</h3>
+                        <p style="color: var(--border-color);">The writing phase where voice and strategy converge.</p>
+                    </div>
+                    <div class="card fade-up" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                        <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--accent-color);">03</span>
+                        <h3 style="color: white;">Refinement</h3>
+                        <p style="color: var(--border-color);">Polishing and tweaking until every word is perfectly placed.</p>
+                    </div>
+                    <!-- [NEW] Step 4 -->
+                    <div class="card fade-up" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                        <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--accent-color);">04</span>
+                        <h3 style="color: white;">Strategic Review</h3>
+                        <p style="color: var(--border-color);">Comprehensive alignment check with your long-term business objectives.</p>
+                    </div>
+                    <!-- [NEW] Step 5 -->
+                    <div class="card fade-up" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                        <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--accent-color);">05</span>
+                        <h3 style="color: white;">Precision Editing</h3>
+                        <p style="color: var(--border-color);">A final, ultra-detailed sweep to ensure total grammatical and stylistic perfection.</p>
+                    </div>
+                    <!-- [NEW] Step 6 -->
+                    <div class="card fade-up" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                        <span style="font-family: var(--font-serif); font-size: 2rem; color: var(--accent-color);">06</span>
+                        <h3 style="color: white;">Global Optimization</h3>
+                        <p style="color: var(--border-color);">Ensuring your content is ready for a global audience and multi-channel delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <div class="container">
-            <div class="footer-top">
+            <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="index.html" class="logo-wrapper">
-                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <polyline points="10 9 9 9 8 9"></polyline>
-                        </svg>
-                        <span class="logo-text">Fr.Writer</span>
-                    </a>
-                    <p class="footer-desc">Premium freelance copywriting and editorial services dedicated to clarity, conversion, and artistic integrity.</p>
+                    <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Mr.Writer">Mr.Writer</a>
+                    <p style="text-align: left; margin-top: 1rem;">Elevating communication through the precision of premium writing services.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Navigation</h4>
-                    <div class="footer-links">
-                        <a href="index.html">Home</a>
-                        <a href="services.html">Expertise</a>
-                        <a href="blog.html">Insights</a>
-                        <a href="contact.html">Reach Out</a>
-                    </div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home 2</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Connect</h4>
-                    <div class="footer-links">
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Twitter (X)</a>
-                        <a href="#">Medium</a>
-                        <a href="#">Substack</a>
-                    </div>
+                    <h4>Other Pages</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <div class="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Cookie Details</a>
+                <div class="footer-col" style="text-align: center;">
+                    <h4>Follow Us</h4>
+                    <div class="social-links" style="display: flex; gap: 1rem; justify-content: center;">
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-box-line"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Fr.Writer Services. All rights reserved.</p>
-                <p>Designed with absolute precision.</p>
+                <p>&copy; 2026 Mr.Writer. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

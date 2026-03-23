@@ -1,73 +1,73 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fr.Writer | Client Portal Login</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login | Mr.Writer</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <style>
-        body {
+        /* Specific rules for Auth pages to ensure NO SCROLL and CENTERED */
+        html, body {
+            height: 100%;
+            margin: 0;
             overflow: hidden;
-            background: var(--bg-color);
+        }
+        .auth-page {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--primary-bg);
         }
     </style>
 </head>
-<body>
+<body data-theme="light">
+    <div class="auth-page">
+        <div class="auth-card fade-up visible">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <a href="index.html" class="logo" style="justify-content: center; margin-bottom: 1.5rem;">
+                    <img src="assets/images/logo.png" alt="Mr.Writer">
+                    Mr.Writer
+                </a>
+                <h2 style="margin-top: 1rem;">Welcome Back</h2>
+                <p>Login to your storyteller dashboard</p>
+            </div>
 
-    <!-- Navbar -->
-    <nav class="navbar" style="border-bottom: none; background: transparent;">
-        <div class="container nav-container">
-            <a href="index.html" class="logo-wrapper">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-                <span class="logo-text">Fr.Writer</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Expertise</a></li>
-                <li><a href="blog.html">Insights</a></li>
-                <li><a href="contact.html">Reach Out</a></li>
-                <li><a href="login.html" class="active">Login</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Auth Container -->
-    <div class="auth-wrapper">
-        <div class="auth-box">
-            <h1>Client Portal</h1>
-            <p>Access active drafts, invoices, and style guides.</p>
-            
-            <form action="#" method="POST">
-                <div class="form-group" style="text-align: left;">
-                    <label class="form-label">Email Address</label>
-                    <input type="email" class="form-input" placeholder="client@company.com" required>
+            <form>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="name@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
                 </div>
                 
-                <div class="form-group" style="text-align: left;">
-                    <label class="form-label" style="display: flex; justify-content: space-between;">
-                        Password
-                        <a href="#" style="color: var(--secondary); text-transform: none; font-weight: 500;">Forgot?</a>
-                    </label>
-                    <input type="password" class="form-input" placeholder="••••••••" required>
-                </div>
-                
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 24px;">Sign In</button>
+                <button type="submit" class="btn-submit">Login</button>
             </form>
 
-            <div style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 24px;">
-                <p style="font-size: 0.95rem; color: var(--text-muted);">
-                    Don't have an active project? <br>
-                    <a href="signup.html" style="color: var(--secondary); font-weight: 600;">Request a Free Consultation</a>
-                </p>
+            <div class="social-btns">
+                <button class="btn-social btn-google">
+                    <i class="ri-google-fill"></i>
+                    Continue with Google
+                </button>
+                <button class="btn-social btn-email">
+                    <i class="ri-mail-line"></i>
+                    Continue with Email
+                </button>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem; font-size: 0.9rem;">
+                <span>Don't have an account?</span>
+                <a href="register.html" style="color: var(--accent-color); font-weight: 600; margin-left: 5px;">Register here</a>
             </div>
         </div>
     </div>
 
+    <!-- main.js included for animation handling if needed, but no theme toggle used here -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
