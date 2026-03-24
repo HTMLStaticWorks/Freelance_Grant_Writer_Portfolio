@@ -265,10 +265,9 @@ input:checked+.slider:before {
 .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: 2.5rem;
     margin-top: 4rem;
     width: 100%;
-    justify-content: center;
 }
 
 .card {
@@ -664,13 +663,8 @@ input:checked+.slider:before {
     }
 
     .card-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card:nth-child(3):last-child {
-        grid-column: span 2;
-        max-width: 600px;
-        justify-self: center;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 
     .footer-grid {
@@ -694,17 +688,12 @@ input:checked+.slider:before {
     }
 
     .card-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .card:nth-child(3):last-child {
-        grid-column: span 1;
-        max-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
     .footer-grid {
         grid-template-columns: 1fr 1fr !important;
-        /* Keep 2 cols at 768px for better symmetry */
         text-align: left;
         gap: 2rem;
     }
@@ -715,6 +704,12 @@ input:checked+.slider:before {
 
     .footer-col .social-links {
         justify-content: flex-start !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-grid {
+        grid-template-columns: 1fr;
     }
 }
 

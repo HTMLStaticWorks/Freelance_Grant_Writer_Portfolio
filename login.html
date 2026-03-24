@@ -12,6 +12,15 @@
         .auth-card .logo {
             justify-content: center;
         }
+
+        /* Hide scrollbar but keep scroll functionality */
+        body {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+        body::-webkit-scrollbar {
+            display: none; /* Chrome, Safari and Opera */
+        }
     </style>
 </head>
 <body data-theme="light">
@@ -34,6 +43,11 @@
                 <div class="form-group">
                     <label>Password</label>
                     <input type="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="checkbox-group" style="display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                    <input type="checkbox" id="remember" style="width: auto;">
+                    <label for="remember" style="margin-bottom: 0;">Remember me</label>
                 </div>
                 
                 <button type="submit" class="btn-submit">Login</button>
