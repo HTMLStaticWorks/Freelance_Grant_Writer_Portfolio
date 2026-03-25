@@ -30,10 +30,63 @@
         body::-webkit-scrollbar {
             display: none; /* Chrome, Safari and Opera */
         }
+
+        .auth-toggles {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            z-index: 1000;
+        }
+
+        [dir="rtl"] .auth-toggles {
+            right: auto;
+            left: 2rem;
+        }
+
+        .or-divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 1.5rem 0;
+            color: var(--secondary-text);
+            font-size: 0.85rem;
+        }
+
+        .or-divider::before,
+        .or-divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .or-divider:not(:empty)::before {
+            margin-right: .5em;
+        }
+
+        .or-divider:not(:empty)::after {
+            margin-left: .5em;
+        }
     </style>
 </head>
 <body data-theme="light">
     <div class="auth-page">
+        <!-- Theme and RTL Toggles -->
+        <div class="auth-toggles">
+            <label class="theme-switch">
+                <input type="checkbox" class="theme-checkbox">
+                <span class="slider">
+                    <div class="slider-icons">
+                        <i class="ri-moon-line"></i>
+                        <i class="ri-sun-line"></i>
+                    </div>
+                </span>
+            </label>
+            <button class="rtl-toggle-btn">RTL</button>
+        </div>
+
         <div class="auth-card fade-up visible">
             <div style="text-align: center; margin-bottom: 2rem;">
                 <a href="index.html" class="logo" style="justify-content: center; margin-bottom: 1rem;">
@@ -67,20 +120,20 @@
                 </div>
                 
                 <button type="submit" class="btn-submit">Register</button>
+
+                <div class="or-divider">or login with</div>
+
+                <div class="social-btns" style="margin-top: 0;">
+                    <button class="btn-social btn-google">
+                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google">
+                        Continue with Google
+                    </button>
+                    <button class="btn-social btn-email">
+                        <img src="https://www.svgrepo.com/show/303161/gmail-icon-logo.svg" alt="Email">
+                        Continue with Email
+                    </button>
+                </div>
             </form>
-
-            <div class="social-btns" style="margin-top: 1.5rem;">
-                <button class="btn-social btn-google">
-        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google">
-        Continue with Google
-    </button>
-
-    <!-- EMAIL BUTTON -->
-    <button class="btn-social btn-email">
-        <img src="https://www.svgrepo.com/show/303161/gmail-icon-logo.svg" alt="Email">
-        Continue with Email
-    </button>
-            </div>
 
             <div style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">
                 <span>Already have an account?</span>

@@ -88,5 +88,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
+    // =============================================
+    // Back to Top Logic
+    // =============================================
+    const backToTop = document.createElement('button');
+    backToTop.id = 'backToTop';
+    backToTop.className = 'back-to-top';
+    backToTop.innerHTML = '<i class="ri-arrow-up-line"></i>';
+    
+    // Only add to non-auth and non-dashboard pages
+    const path = window.location.pathname.toLowerCase();
+    const isExcludedPage = path.includes('login.html') || 
+                           path.includes('register.html') ||
+                           path.includes('dashboard');
+    
+    if (!isExcludedPage) {
+        document.body.appendChild(backToTop);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 });
