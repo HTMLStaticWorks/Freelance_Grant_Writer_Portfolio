@@ -251,9 +251,12 @@ input:checked+.slider:before {
 .btn-login {
     background: var(--primary-text);
     color: var(--primary-bg);
-    padding: 0.8rem 1.5rem;
+    padding: 0.6rem 1.5rem;
     border-radius: 4px;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    height: 38px;
 }
 
 .btn-login:hover {
@@ -289,16 +292,12 @@ input:checked+.slider:before {
 }
 
 .card-image {
-    width: 150px;
-    /* Square fit inside */
-    height: 150px;
+    width: 100%;
+    height: 250px;
     background-size: cover;
     background-position: center;
-    border-radius: 12px;
-    /* Square with rounded corners */
-    margin-top: 2rem;
+    margin-top: 0;
     transition: transform var(--transition-speed);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover .card-image {
@@ -723,6 +722,12 @@ input:checked+.slider:before {
     justify-content: flex-start;
 }
 
+footer {
+    padding: 100px 0 0;
+    background: var(--primary-bg);
+    border-top: 1px solid var(--border-color);
+}
+
 .footer-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
@@ -1073,14 +1078,17 @@ input:checked+.slider:before {
     border: 1px solid var(--border-color);
     color: var(--primary-text);
     border-radius: 4px;
-    padding: 4px 10px;
-    font-size: 0.8rem;
+    padding: 0 8px;
+    font-size: 0.75rem;
     font-weight: 600;
     cursor: pointer;
     font-family: var(--font-sans);
     letter-spacing: 0.5px;
     transition: all var(--transition-speed);
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    height: 24px;
 }
 
 .rtl-toggle-btn:hover {
@@ -1203,15 +1211,17 @@ input:checked+.slider:before {
 
 @media (max-width: 768px) {
     .hero {
-        height: 65vh;
-        min-height: 500px;
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 40px;
     }
 }
 
 @media (max-width: 360px) {
     .hero {
-        height: 60vh;
-        min-height: 450px;
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 40px;
     }
 }
 
@@ -1366,7 +1376,7 @@ input:checked+.slider:before {
 
 .card {
     background: var(--card-bg);
-    padding: 25px;
+    padding: 0;
     border-radius: 12px;
     text-align: center;
 
@@ -1487,7 +1497,8 @@ body.dark .premium-card {
 
 /* ===== IMAGE ===== */
 .card-image {
-    height: 180px;
+    width: 100%;
+    height: 250px;
     overflow: hidden;
 }
 
