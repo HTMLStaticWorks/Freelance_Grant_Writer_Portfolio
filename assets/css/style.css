@@ -1433,6 +1433,18 @@ footer {
     height: 20px;
 }
 
+/* APPLE STYLE */
+.btn-apple {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.btn-apple:hover {
+    background: #e0e1dc;
+    transform: translateY(-2px);
+}
+
 /* GOOGLE (REAL STYLE) */
 .btn-google {
     background: #fff;
