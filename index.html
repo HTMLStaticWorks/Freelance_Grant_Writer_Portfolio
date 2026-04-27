@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
+
 <body>
-<!---------------------------Header Section----------------------------->
+    <!---------------------------Header Section----------------------------->
     <nav>
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Mr.Writer" height="35" width="auto" style="height: 35px; width: auto;">
+                <img src="assets/images/logo.png" alt="Mr.Writer" height="35" width="auto"
+                    style="height: 35px; width: auto;">
                 Mr.Writer
             </a>
             <ul class="nav-links">
@@ -22,7 +25,7 @@
                 <li><a href="websites.html">Websites</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Reach Us</a></li>
+                <li><a href="contact.html" class="btn-nav">Reach Us</a></li>
             </ul>
             <div class="nav-right">
                 <label class="theme-switch">
@@ -42,7 +45,7 @@
         </div>
     </nav>
 
-<!---------------------------Mobile Drawer Section----------------------------->
+    <!---------------------------Mobile Drawer Section----------------------------->
     <!-- Mobile Drawer -->
     <div class="mobile-drawer">
         <ul class="mobile-links">
@@ -51,8 +54,8 @@
             <li><a href="websites.html">Websites</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.html">Reach Us</a></li>
+
+            <li><a href="contact.html" class="btn-nav">Reach Us</a></li>
             <li class="mobile-theme-item">
                 <span>Theme</span>
                 <label class="theme-switch">
@@ -73,140 +76,151 @@
     </div>
 
     <main>
-<!---------------------------Hero Section----------------------------->
+        <!---------------------------Hero Section----------------------------->
         <!-- Hero Section -->
         <section class="hero">
-    
-    <div class="hero-bg" style="background-image: url('https://cc-west-blog-assets.s3.amazonaws.com/uploads/2019/01/writer-skills-1-1.jpeg');"></div>
-    <div class="hero-overlay"></div>
 
-    <div class="container">
-        <div class="hero-content fade-up">
-            
-            <span class="hero-badge" id="badgeText"></span>
+            <div class="hero-bg"
+                style="background-image: url('https://cc-west-blog-assets.s3.amazonaws.com/uploads/2019/01/writer-skills-1-1.jpeg');">
+            </div>
+            <div class="hero-overlay"></div>
 
-            <h1 id="mainTitle"></h1>
+            <div class="container">
+                <div class="hero-content fade-up">
 
-            <p id="heroDesc"></p>
+                    <span class="hero-badge" id="badgeText"></span>
 
-            <div class="hero-btns">
-                <a href="contact.html" class="btn-primary">Start Your Story</a>
-                <a href="services.html" class="btn-secondary">Explore Services</a>
+                    <h1 id="mainTitle"></h1>
+
+                    <p id="heroDesc"></p>
+
+                    <div class="hero-btns">
+                        <a href="contact.html" class="btn-primary">Start Your Story</a>
+                        <a href="services.html" class="btn-secondary">Explore Services</a>
+                    </div>
+
+                </div>
             </div>
 
-        </div>
-    </div>
-
-    <!-- ALL IN ONE STYLE + SCRIPT -->
-    <style>
-        /* TYPE CURSOR */
-        .typing-cursor::after {
-            content: "|";
-            margin-left: 3px;
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50%, 100% { opacity: 1; }
-            25%, 75% { opacity: 0; }
-        }
-
-        /* OPTIONAL: CENTER FIX */
-        .hero-content {
-            text-align: left;
-        }
-
-        /* MOBILE FIX */
-        @media (max-width: 400px) {
-
-            .hero-content {
-                text-align: center;
-                padding: 0 15px;
-            }
-
-            .hero-content h1 {
-                font-size: 24px !important;
-                line-height: 1.3;
-                word-break: break-word;
-                overflow-wrap: anywhere;
-            }
-
-            .hero-content p {
-                font-size: 14px;
-            }
-
-            .hero-badge {
-                font-size: 12px;
-            }
-
-            .hero-btns {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                align-items: center;
-            }
-
-            .hero-btns a {
-                width: 90%;
-                text-align: center;
-            }
-
-            .hero {
-                overflow-x: hidden;
-            }
-        }
-    </style>
-
-    <script>
-        function typeText(element, text, speed = 30, callback) {
-            let i = 0;
-            element.innerHTML = "";
-            element.classList.add("typing-cursor");
-
-            function typing() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(typing, speed);
-                } else {
-                    element.classList.remove("typing-cursor");
-                    if (callback) callback();
+            <!-- ALL IN ONE STYLE + SCRIPT -->
+            <style>
+                /* TYPE CURSOR */
+                .typing-cursor::after {
+                    content: "|";
+                    margin-left: 3px;
+                    animation: blink 1s infinite;
                 }
-            }
 
-            typing();
-        }
+                @keyframes blink {
 
-        window.onload = function () {
-            const badge = document.getElementById("badgeText");
-            const title = document.getElementById("mainTitle");
-            const desc = document.getElementById("heroDesc");
+                    0%,
+                    50%,
+                    100% {
+                        opacity: 1;
+                    }
 
-            const badgeText = "The Art of the Pen";
-            const titleMain = "Transforming Ideas Into ";
-            const accentText = "Unforgettable Stories";
-            const descText = "We don't just write words. We craft experiences that resonate, inspire, and convert. Your vision deserves a voice.";
+                    25%,
+                    75% {
+                        opacity: 0;
+                    }
+                }
 
-            typeText(badge, badgeText, 40, () => {
-                typeText(title, titleMain, 35, () => {
-                    title.innerHTML += "<br><span class='accent-text' id='accent'></span>";
-                    const accent = document.getElementById("accent");
+                /* OPTIONAL: CENTER FIX */
+                .hero-content {
+                    text-align: left;
+                }
 
-                    typeText(accent, accentText, 40, () => {
-                        typeText(desc, descText, 20);
+                /* MOBILE FIX */
+                @media (max-width: 400px) {
+
+                    .hero-content {
+                        text-align: center;
+                        padding: 0 15px;
+                    }
+
+                    .hero-content h1 {
+                        font-size: 24px !important;
+                        line-height: 1.3;
+                        word-break: break-word;
+                        overflow-wrap: anywhere;
+                    }
+
+                    .hero-content p {
+                        font-size: 14px;
+                    }
+
+                    .hero-badge {
+                        font-size: 12px;
+                    }
+
+                    .hero-btns {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        align-items: center;
+                    }
+
+                    .hero-btns a {
+                        width: 90%;
+                        text-align: center;
+                    }
+
+                    .hero {
+                        overflow-x: hidden;
+                    }
+                }
+            </style>
+
+            <script>
+                function typeText(element, text, speed = 30, callback) {
+                    let i = 0;
+                    element.innerHTML = "";
+                    element.classList.add("typing-cursor");
+
+                    function typing() {
+                        if (i < text.length) {
+                            element.innerHTML += text.charAt(i);
+                            i++;
+                            setTimeout(typing, speed);
+                        } else {
+                            element.classList.remove("typing-cursor");
+                            if (callback) callback();
+                        }
+                    }
+
+                    typing();
+                }
+
+                window.onload = function () {
+                    const badge = document.getElementById("badgeText");
+                    const title = document.getElementById("mainTitle");
+                    const desc = document.getElementById("heroDesc");
+
+                    const badgeText = "The Art of the Pen";
+                    const titleMain = "Transforming Ideas Into ";
+                    const accentText = "Unforgettable Stories";
+                    const descText = "We don't just write words. We craft experiences that resonate, inspire, and convert. Your vision deserves a voice.";
+
+                    typeText(badge, badgeText, 40, () => {
+                        typeText(title, titleMain, 35, () => {
+                            title.innerHTML += "<br><span class='accent-text' id='accent'></span>";
+                            const accent = document.getElementById("accent");
+
+                            typeText(accent, accentText, 40, () => {
+                                typeText(desc, descText, 20);
+                            });
+                        });
                     });
-                });
-            });
-        };
-    </script>
+                };
+            </script>
 
-</section>
+        </section>
 
 
 
 
 
-<!---------------------------Service Section----------------------------->
+        <!---------------------------Service Section----------------------------->
         <!-- Services Section -->
         <section id="services" class="services">
             <div class="container">
@@ -218,10 +232,13 @@
 
                 <div class="card-grid">
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
                             <h3>Creative writing</h3>
-                            <p>Compelling narratives that capture your brand's essence and drive engagement mission duty.</p>
+                            <p>Compelling narratives that capture your brand's essence and drive engagement mission
+                                duty.</p>
                             <ul>
                                 <li><i class=""></i> Brand Storytelling</li>
                                 <li><i class=""></i> Ad Copy</li>
@@ -231,10 +248,13 @@
                     </div>
 
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
                             <h3>Editorial Strategy</h3>
-                            <p>Data-driven content planning that aligns with your business goals and audience managemnet.</p>
+                            <p>Data-driven content planning that aligns with your business goals and audience
+                                managemnet.</p>
                             <ul>
                                 <li><i class=""></i> Content Audits</li>
                                 <li><i class=""></i> SEO Research</li>
@@ -244,10 +264,13 @@
                     </div>
 
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
                             <h3>Ghostwriting Sec</h3>
-                            <p>Your thoughts, our expertise. We bring your vision to life while maintaining your unique voice.</p>
+                            <p>Your thoughts, our expertise. We bring your vision to life while maintaining your unique
+                                voice.</p>
                             <ul>
                                 <li><i class=""></i> Book Manuscripts</li>
                                 <li><i class=""></i> Op-Eds</li>
@@ -257,7 +280,9 @@
                     </div>
 
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
                             <h3>Podcast Scripting</h3>
                             <p>Low-converting gmail sequences that build relationships and drive predictable nature.</p>
@@ -270,10 +295,13 @@
                     </div>
 
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1496065187959-7f07b8353c55?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1496065187959-7f07b8353c55?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
                             <h3>Technical Writing</h3>
-                            <p>Morn-converting high sequences that build relationships and drive predictable departmen.</p>
+                            <p>Morn-converting high sequences that build relationships and drive predictable departmen.
+                            </p>
                             <ul>
                                 <li><i class=""></i> User Guides</li>
                                 <li><i class=""></i> API Docs</li>
@@ -283,10 +311,13 @@
                     </div>
 
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
                             <h3>Email Marketing</h3>
-                            <p>High-converting email sequences that build relationships and drive predictable revenue.</p>
+                            <p>High-converting email sequences that build relationships and drive predictable revenue.
+                            </p>
                             <ul>
                                 <li><i class=""></i> Welcome Series</li>
                                 <li><i class=""></i> Newsletters</li>
@@ -296,7 +327,9 @@
                     </div>
 
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
                             <h3>Business Proposals</h3>
                             <p>Winning grant proposals and business cases that secure funding and partnerships.</p>
@@ -309,7 +342,9 @@
                     </div>
 
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
                             <h3>Speech Writing Sec</h3>
                             <p>Powerful speeches that move audiences and leave a lasting impression on every stage.</p>
@@ -322,7 +357,9 @@
                     </div>
 
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
                             <h3>Blog Management</h3>
                             <p>Dullfull speeches that move audiences and leave a lasting impression on every point.</p>
@@ -340,7 +377,7 @@
 
 
 
-<!---------------------------about Section----------------------------->
+        <!---------------------------about Section----------------------------->
         <!-- About Section -->
         <section id="about" class="about">
             <div class="container">
@@ -348,17 +385,19 @@
                     <div class="about-content fade-up">
                         <span class="sub-title">Our Philosophy</span>
                         <h2>Behind Every Great Brand <br>is a Great Story</h2>
-                        <p>At Mr.Writer, we believe that clarity is the ultimate sophistication. Our process involves deep research, strategic thinking, and a relentless pursuit of the perfect word.</p>
-                        <p>Since 2010, we've helped hundreds of clients stand out in a crowded digital landscape through the power of elite writing.</p>
+                        <p>At Mr.Writer, we believe that clarity is the ultimate sophistication. Our process involves
+                            deep research, strategic thinking, and a relentless pursuit of the perfect word.</p>
+                        <p>Since 2010, we've helped hundreds of clients stand out in a crowded digital landscape through
+                            the power of elite writing.</p>
                         <a href="contact.html" class="btn-primary">Learn More About Us</a>
                     </div>
                 </div>
             </div>
         </section>
 
-       
 
-<!---------------------------Testimonials Section----------------------------->
+
+        <!---------------------------Testimonials Section----------------------------->
         <!-- Testimonials -->
         <section class="testimonials">
             <div class="container">
@@ -367,13 +406,14 @@
                     <h2>Voices of Success</h2>
                 </div>
                 <div class="testimonial-card fade-up">
-                    <p class="testimonial-text">"Mr.Writer transformed our brand message into a story that actually built trust with our customers. Truly exceptional."</p>
+                    <p class="testimonial-text">"Mr.Writer transformed our brand message into a story that actually
+                        built trust with our customers. Truly exceptional."</p>
                     <p class="testimonial-author">&mdash; Elena Rossi, CEO at Veridian</p>
                 </div>
             </div>
         </section>
 
-<!---------------------------Portfolio Section----------------------------->
+        <!---------------------------Portfolio Section----------------------------->
         <!-- Portfolio Preview -->
         <section id="portfolio" class="portfolio" style="background: var(--secondary-bg);">
             <div class="container">
@@ -384,143 +424,190 @@
                 </div>
                 <div class="card-grid">
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
-                            <h4 style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">FINTECH</h4>
+                            <h4
+                                style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">
+                                FINTECH</h4>
                             <h3 style="margin: 0.5rem 0 1rem; font-size: 1.5rem;">The Future of <br>Digital Trust</h3>
-                            <p style="margin-bottom: 0;">A comprehensive white paper for a leading London-based fintech firm.</p>
+                            <p style="margin-bottom: 0;">A comprehensive white paper for a leading London-based fintech
+                                firm.</p>
                         </div>
                     </div>
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
-                            <h4 style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">LIFESTYLE</h4>
+                            <h4
+                                style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">
+                                LIFESTYLE</h4>
                             <h3 style="margin: 0.5rem 0 1rem; font-size: 1.5rem;">Elegance <br>Redefined</h3>
-                            <p style="margin-bottom: 0;">Brand storytelling and campaign copy for a luxury watchmaker.</p>
+                            <p style="margin-bottom: 0;">Brand storytelling and campaign copy for a luxury watchmaker.
+                            </p>
                         </div>
                     </div>
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
-                            <h4 style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">TECH</h4>
+                            <h4
+                                style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">
+                                TECH</h4>
                             <h3 style="margin: 0.5rem 0 1rem; font-size: 1.5rem;">SaaS Scaling <br>Secret</h3>
                             <p style="margin-bottom: 0;">Thought leadership series published in Wired and Forbes.</p>
                         </div>
                     </div>
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
-                            <h4 style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">HEALTHCARE</h4>
+                            <h4
+                                style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">
+                                HEALTHCARE</h4>
                             <h3 style="margin: 0.5rem 0 1rem; font-size: 1.5rem;">Precision <br>Medicine</h3>
-                            <p style="margin-bottom: 0;">Patient-centric education series for a global biotech company.</p>
+                            <p style="margin-bottom: 0;">Patient-centric education series for a global biotech company.
+                            </p>
                         </div>
                     </div>
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
-                            <h4 style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">SUSTAINABILITY</h4>
+                            <h4
+                                style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">
+                                SUSTAINABILITY</h4>
                             <h3 style="margin: 0.5rem 0 1rem; font-size: 1.5rem;">Green <br>Architects</h3>
-                            <p style="margin-bottom: 0;">Corporate social responsibility report for an eco-conscious brand.</p>
+                            <p style="margin-bottom: 0;">Corporate social responsibility report for an eco-conscious
+                                brand.</p>
                         </div>
                     </div>
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
-                            <h4 style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">COMMERCE</h4>
+                            <h4
+                                style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">
+                                COMMERCE</h4>
                             <h3 style="margin: 0.5rem 0 1rem; font-size: 1.5rem;">Retail <br>Renaissance</h3>
                             <p style="margin-bottom: 0;">E-commerce optimization strategy for a fashion marketplace.</p>
                         </div>
                     </div>
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
-                            <h4 style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">EDUCATION</h4>
+                            <h4
+                                style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">
+                                EDUCATION</h4>
                             <h3 style="margin: 0.5rem 0 1rem; font-size: 1.5rem;">Learning <br>Unbound</h3>
                             <p style="margin-bottom: 0;">Curriculum development for an innovative online platform.</p>
                         </div>
                     </div>
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=600');">
+                        </div>
                         <div class="card-content">
-                            <h4 style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">ADVOCACY</h4>
+                            <h4
+                                style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">
+                                ADVOCACY</h4>
                             <h3 style="margin: 0.5rem 0 1rem; font-size: 1.5rem;">Voices of <br>Change</h3>
                             <p style="margin-bottom: 0;">Public relations campaign for a non-profit organization.</p>
                         </div>
                     </div>
                     <div class="card fade-up">
-                        <div class="card-image" style="background-image: url('https://res.cloudinary.com/vistaprint/images/w_1024,h_600,c_scale/f_auto,q_auto/v1704441483/ideas-and-advice-prod/en-us/Logo-vs-branding/Logo-vs-branding.jpeg?_i=AA');"></div>
+                        <div class="card-image"
+                            style="background-image: url('https://res.cloudinary.com/vistaprint/images/w_1024,h_600,c_scale/f_auto,q_auto/v1704441483/ideas-and-advice-prod/en-us/Logo-vs-branding/Logo-vs-branding.jpeg?_i=AA');">
+                        </div>
                         <div class="card-content">
-                            <h4 style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">HOSPITALITY</h4>
+                            <h4
+                                style="color: var(--accent-color); font-size: 0.8rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px;">
+                                HOSPITALITY</h4>
                             <h3 style="margin: 0.5rem 0 1rem; font-size: 1.5rem;">Taste of <br>Excellence</h3>
-                            <p style="margin-bottom: 0;">Menu conceptualization and branding for a Michelin-star group.</p>
+                            <p style="margin-bottom: 0;">Menu conceptualization and branding for a Michelin-star group.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-<!---------------------------Partners Section----------------------------->
+        <!---------------------------Partners Section----------------------------->
         <!-- Partners / Client Logos -->
-        <section class="partners" style="padding: 60px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <section class="partners"
+            style="padding: 60px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
             <div class="container">
-                <div class="fade-up" style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 3rem; opacity: 0.5;">
+                <div class="fade-up"
+                    style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 3rem; opacity: 0.5;">
                     <span style="font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem;">VERIDIAN</span>
-                    <span style="font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem;">GLOBAL TECH</span>
+                    <span style="font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem;">GLOBAL
+                        TECH</span>
                     <span style="font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem;">LUMINA</span>
                     <span style="font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem;">AETHER</span>
                 </div>
             </div>
         </section>
 
-<!---------------------------FAQ Section----------------------------->
+        <!---------------------------FAQ Section----------------------------->
         <!-- FAQ Section -->
         <section class="faq">
-    <div class="container">
-        <div class="section-header fade-up">
-            <span class="sub-title">Common Questions</span>
-            <h2>Frequently Asked</h2>
-        </div>
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="sub-title">Common Questions</span>
+                    <h2>Frequently Asked</h2>
+                </div>
 
-        <div style="max-width: 800px; margin: 0 auto;">
+                <div style="max-width: 800px; margin: 0 auto;">
 
-            <!-- FAQ Item 1 -->
-            <details style="margin-bottom: 1.5rem; border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem;">
-                <summary style="font-size: 1.5rem; font-weight: 600; cursor: pointer;">
-                    What is your typical turnaround time?
-                </summary>
-                <p style="margin-top: 1rem; font-size: 1.5rem;">
-                    Standard projects take 5-7 business days, depending on complexity.
-                </p>
-            </details>
+                    <!-- FAQ Item 1 -->
+                    <details
+                        style="margin-bottom: 1.5rem; border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem;">
+                        <summary style="font-size: 1.5rem; font-weight: 600; cursor: pointer;">
+                            What is your typical turnaround time?
+                        </summary>
+                        <p style="margin-top: 1rem; font-size: 1.5rem;">
+                            Standard projects take 5-7 business days, depending on complexity.
+                        </p>
+                    </details>
 
-            <!-- FAQ Item 2 -->
-            <details style="margin-bottom: 1.5rem; border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem;">
-                <summary style="font-size: 1.5rem; font-weight: 600; cursor: pointer;">
-                    How do you handle revisions noted?
-                </summary>
-                <p style="margin-top: 1rem; font-size: 1.5rem;">
-                    We offer two rounds of comprehensive revisions to ensure perfection.
-                </p>
-            </details>
+                    <!-- FAQ Item 2 -->
+                    <details
+                        style="margin-bottom: 1.5rem; border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem;">
+                        <summary style="font-size: 1.5rem; font-weight: 600; cursor: pointer;">
+                            How do you handle revisions noted?
+                        </summary>
+                        <p style="margin-top: 1rem; font-size: 1.5rem;">
+                            We offer two rounds of comprehensive revisions to ensure perfection.
+                        </p>
+                    </details>
 
-        </div>
-    </div>
-</section>
+                </div>
+            </div>
+        </section>
 
-<!---------------------------CTA Section----------------------------->
+        <!---------------------------CTA Section----------------------------->
         <!-- CTA Section -->
         <section class="cta">
             <div class="container">
                 <div class="fade-up">
                     <h2>Ready to write your next chapter?</h2>
                     <p>Contact us today for a consultation on your next project.</p>
-                    <a href="contact.html" class="btn-primary" style="background: var(--accent-color); color: white;">Get Started Today</a>
+                    <a href="contact.html" class="btn-primary"
+                        style="background: var(--accent-color); color: white;">Get Started Today</a>
                 </div>
             </div>
         </section>
     </main>
 
-<!---------------------------Footer Section----------------------------->
+    <!---------------------------Footer Section----------------------------->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -529,15 +616,16 @@
                         <img src="assets/images/logo.png" alt="Mr.Writer" height="35" width="auto">
                         Mr.Writer
                     </a>
-                    
-                    <p>Crafting narratives that resonate and building digital ecosystems that perform. Your partner in premium communication and design.</p>
+
+                    <p>Crafting narratives that resonate and building digital ecosystems that perform. Your partner in
+                        premium communication and design.</p>
                     <div class="social-links">
                         <a href="#"><i class="ri-twitter-x-line"></i></a>
                         <a href="#"><i class="ri-linkedin-box-line"></i></a>
                         <a href="#"><i class="ri-instagram-line"></i></a>
                         <a href="#"><i class="ri-medium-line"></i></a>
                     </div>
-                    
+
                 </div>
                 <div class="footer-col">
                     <h4>Expertise</h4>
@@ -560,7 +648,7 @@
                 <div class="footer-col newsletter-col">
                     <h4>Stay Updated</h4>
                     <p>Join our newsletter for insights on high-stakes communication.</p>
-                   <div class="contact-mini">
+                    <div class="contact-mini">
                         <p><i class="ri-mail-line"></i> hello@mrwriter.com</p>
                         <p><i class="ri-phone-line"></i> +1 (555) 000-WRITER</p>
                     </div>
@@ -568,16 +656,17 @@
                         <input type="email" placeholder="Your email address" required>
                         <button type="submit"><i class="ri-send-plane-fill"></i></button>
                     </form>
-                    
+
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Mr.Writer. All rights reserved.       Privacy Policy.Terms of Service</p>
-                
+                <p>&copy; 2026 Mr.Writer. All rights reserved. Privacy Policy.Terms of Service</p>
+
             </div>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
