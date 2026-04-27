@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Theme Toggle Logic
     // =============================================
     const body = document.body;
-    
+
     // Check for saved theme
     const savedTheme = localStorage.getItem('theme') || 'light';
     body.setAttribute('data-theme', savedTheme);
-    
+
     const themeCheckboxes = document.querySelectorAll('.theme-checkbox');
     themeCheckboxes.forEach(cb => {
         cb.checked = savedTheme === 'dark';
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // =============================================
     const hamburger = document.querySelector('.hamburger');
     const mobileDrawer = document.querySelector('.mobile-drawer');
-    
+
     if (hamburger) {
         hamburger.addEventListener('click', () => {
             mobileDrawer.classList.toggle('active');
@@ -95,13 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
     backToTop.id = 'backToTop';
     backToTop.className = 'back-to-top';
     backToTop.innerHTML = '<i class="ri-arrow-up-line"></i>';
-    
+
     // Only add to non-auth and non-dashboard pages
     const path = window.location.pathname.toLowerCase();
-    const isExcludedPage = path.includes('login.html') || 
-                           path.includes('register.html') ||
-                           path.includes('dashboard');
-    
+    const isExcludedPage = path.includes('login.html') ||
+        path.includes('register.html') ||
+        path.includes('dashboard');
+
     if (!isExcludedPage) {
         document.body.appendChild(backToTop);
 
